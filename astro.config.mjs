@@ -1,13 +1,11 @@
 import deno from "@astrojs/deno";
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
 	output: "server",
 	adapter: deno(),
-	vite: {
-		optimizeDeps: {
-			exclude: ["sharp"],
-		},
+	image: {
+		service: passthroughImageService(),
 	},
 });
