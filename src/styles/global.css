@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white dark:bg-black font-satoshi font-[420] tracking-wide text-gray-900 dark:text-gray-100;
+  }
+}
+
+@layer components {
+  ._btn {
+    @apply text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700;
+  }
+  ._icon-btn {
+    @apply _btn;
+    @apply aspect-square h-10 w-10 p-0 flex items-center justify-center;
+  }
+  ._card {
+    @apply bg-white dark:bg-gray-800 rounded-lg overflow-hidden p-2 border border-gray-200 dark:border-gray-700;
+  }
+}
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format("truetype-variations");
+  font-weight: 1 999;
+}
+
+body {
+  transition: background 0.5s, color 0.5s;
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }
+    100% { transform: rotate( 0.0deg) }
+  }
+  
+  .reveal-image {
+    animation-name: mask-animation;
+    animation-duration: 2.5s;
+  }
+  
+  @keyframes mask-animation {
+    0% {
+      mask: linear-gradient(90deg, #000 25%, #000000e6 50%, #00000000) 150% 0 / 400% no-repeat;
+      opacity: .2;
+    }
+    100% {
+      mask: linear-gradient(90deg, #000 25%, #000000e6 50%, #00000000) 0 / 400% no-repeat;
+      opacity: 1;
+    }
+  }
+
+  ._bg-effect {
+    z-index: -1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    opacity: 0.15;
+    background-image: conic-gradient(at 92% 8%, rgb(32, 33, 40) 90deg, transparent 0deg, transparent 225deg, transparent 0deg);
+    background-size: 15px 15px;
+    background-position: 0px 0px;
+    pointer-events: none;
+  }

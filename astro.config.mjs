@@ -3,7 +3,7 @@ import tailwind from "@astrojs/tailwind";
 import { defineConfig, passthroughImageService } from "astro/config";
 
 export default defineConfig({
-	output: "server",
+	output: "hybrid",
 	integrations: [tailwind()],
 	adapter: deno(),
 	image: {

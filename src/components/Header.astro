@@ -1,0 +1,68 @@
+---
+import DarkMode from "./DarkMode.astro";
+import Icon from "./Icon.astro";
+import { SOCIALS } from "../utils/constants";
+---
+
+<div class="absolute top-4 right-4 z-10 hidden gap-2 md:flex">
+    <DarkMode />
+</div>
+{/*<Navbar activeUrl={route} />*/}
+<div class="flex flex-col md:flex-row items-center gap-10">
+    <div class="flex flex-col">
+        <h1 class="text-xl tracking-wide">
+            Hello! <span class="wave">👋</span>
+            <br class="" /> My name is
+            {" "}
+            <span class="font-bold">José Donato</span>
+        </h1>
+        <p class="text-xs text-gray-500 mt-4">
+            I'm a Fullstack Engineer from Portugal with a master's degree in
+            Informatics Security and bachelor in Computer Science. Currently
+            working remotely at OpenBB. I like web, crypto and open source.
+            <br /> Want to have a quick chat? Send me a DM on{" "}
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://twitter.com/josedonato__"
+                class="underline text-gray-800 hover:text-black"
+            >
+                Twitter
+            </a>{" "}
+            or{" "}
+            <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="mailto:jose-donato@protonmail.com"
+                class="underline text-gray-800 hover:text-black"
+            >
+                email me
+            </a>
+            .
+        </p>
+        <div class="flex gap-3 mt-4 items-end">
+            {
+                SOCIALS.map((social) => (
+                    <a
+                        aria-label={social.name}
+                        class="_icon-btn"
+                        href={social.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <Icon id={social.icon} />
+                    </a>
+                ))
+            }
+        </div>
+    </div>
+    <div class="flex md:min-w-[20%]">
+        <img
+            src="/avatar.webp"
+            class="rounded-md h-40 object-cover shadow-lg"
+            alt="me"
+            loading="eager"
+        />
+    </div>
+</div>
+<div class="h-[1px] w-full bg-gray-300 my-10"></div>
