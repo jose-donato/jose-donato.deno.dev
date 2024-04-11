@@ -44,14 +44,31 @@ export const PAST_EXPERIENCE_HOMEPAGE = [
 		title: "Cybersecurity Researcher",
 		place: "University of Coimbra",
 		placeUrl: "https://www.uc.pt/en",
-		description: `As part of my master internship, I was awarded a research scholarship from FCT (the Portuguese public agency that supports science, technology and innovation). This enabled me to work independently while having the support of my supervisor. It was a great challenge that came with a lot of freedom, but also with huge responsibilities. The focus of this internship (and my dissertation) was to assess whether web applications were already a viable alternative to native ones in mobile devices. Based on this, I delivered my master thesis, which was a comparative study between web and native applications, read my [master thesis here](/master-thesis?password=thesis2021).`,
+		description:
+			"As part of my master internship, I was awarded a research scholarship from FCT (the Portuguese public agency that supports science, technology and innovation). This enabled me to work independently while having the support of my supervisor. It was a great challenge that came with a lot of freedom, but also with huge responsibilities. The focus of this internship (and my dissertation) was to assess whether web applications were already a viable alternative to native ones in mobile devices. Based on this, I delivered my master thesis, which was a comparative study between web and native applications, if you are interested in reading my master thesis DM me.",
 		date: "2019 - 2020",
 	},
 	{
 		title: "Freelance Fullstack Developer",
 		place: "",
 		description: `In 2018, I built the credential platform for Queima das Fitas, one of the biggest festivals in Portugal - it enabled the creation of the credentials and included an application (in Flutter) to read the QR codes at the festivals' entrance. I have also built a [native application for a high school in my hometown](https://appadvice.com/app/myesjf/1462460664) and a different [application for Queima das Fitas](https://noticias.uc.pt/multimedia/videos/queimapp-chegou-a-primeira-aplicacao-mobile-dedicada-a-queima-das-fitas/) which later evolved into [EveApp](https://www.facebook.com/EveApp2019/). All these applications were built using React Native. Later, I developed several applications professionally including a website for a nation-wide radio [ruc.pt](https://rux.pt) using Next.js, TailwindCSS for the frontend and Wordpress, Graphql for the backend, as well as other web applications using Next.js and Firebase for clients in Upwork freelancing platform.`,
-		date: "2018 - 2019",
+		date: "2018 - 2020",
+	},
+];
+
+export const HIGHLIGHTS_HOMEPAGE = [
+	{
+		title: "Showcased on Cloudflare: Edge-Optimized Remix Run Stack",
+		description:
+			"Highlighted by Cloudflare, my project leverages the Remix stack, tailored for edge computing with Cloudflare Pages and D1.",
+		url: "https://blog.cloudflare.com/d1-turning-it-up-to-11",
+	},
+	{
+		title:
+			"Comparing the Performance of Web Applications to Native Applications",
+		description:
+			"In my master's thesis, I conducted a comparative study between web and native applications for mobile devices, exploring their reliability and performance.",
+		url: "/master_thesis.pdf",
 	},
 ];
 

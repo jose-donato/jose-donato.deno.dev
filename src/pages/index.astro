@@ -1,80 +1,90 @@
 ---
 import Icon from "../components/Icon.astro";
 import Layout from "../layouts/Layout.astro";
-import { EDUCATION, PAST_EXPERIENCE_HOMEPAGE } from "../utils/constants";
+import {
+  EDUCATION,
+  PAST_EXPERIENCE_HOMEPAGE,
+  HIGHLIGHTS_HOMEPAGE,
+} from "../utils/constants";
 import { marked } from "marked";
 ---
 
 <Layout>
-    <h2 class="text-lg font-bold uppercase tracking-widest">Job Experience</h2>
-    <ul>
+  <div class="space-y-20">
+    <div>
+      <h2 class="text-lg font-bold uppercase tracking-widest">
+        Job Experience
+      </h2>
+      <ul class="mt-6 space-y-6">
         {
-            PAST_EXPERIENCE_HOMEPAGE.map((experience) => (
-                <li class="mt-6">
-                    <div class="flex gap-2 flex-col">
-                        <h3 class="text-base font-semibold flex gap-1 items-center">
-                            {experience.title}{" "}
-                            {experience.place &&
-                                (experience.placeUrl ? (
-                                    <a
-                                        href={experience.placeUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="text-sm font-normal relative"
-                                    >
-                                        @ {experience.place}{" "}
-                                        <Icon
-                                            id="material-symbols-open-in-new-rounded"
-                                            className="h-2.5 w-2.5 absolute top-0.5 -right-3"
-                                        />
-                                    </a>
-                                ) : (
-                                    <span class="text-sm font-normal">
-                                        @ {experience.place}
-                                    </span>
-                                ))}
-                        </h3>
-                        <p class="text-xs text-gray-500">{experience.date}</p>
-                    </div>
-                    <article
-                        class="my-2 prose dark:prose-invert prose-sm max-w-none"
-                        set:html={marked(experience.description)}
-                    />
-                </li>
-            ))
+          PAST_EXPERIENCE_HOMEPAGE.map((experience) => (
+            <li>
+              <div class="flex gap-2 flex-col">
+                <h3 class="text-base font-semibold flex gap-1 items-center">
+                  {experience.title}{" "}
+                  {experience.place &&
+                    (experience.placeUrl ? (
+                      <a
+                        href={experience.placeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm font-normal relative"
+                      >
+                        @ {experience.place}{" "}
+                        <Icon
+                          id="material-symbols-open-in-new-rounded"
+                          className="h-2.5 w-2.5 absolute top-0.5 -right-3"
+                        />
+                      </a>
+                    ) : (
+                      <span class="text-sm font-normal">
+                        @ {experience.place}
+                      </span>
+                    ))}
+                </h3>
+                <p class="text-xs text-gray-500">{experience.date}</p>
+              </div>
+              <article
+                class="my-2 prose dark:prose-invert prose-sm max-w-none"
+                set:html={marked(experience.description)}
+              />
+            </li>
+          ))
         }
-    </ul>
-    <h2 class="text-lg font-bold uppercase tracking-widest mt-10">Education</h2>
-    <ul>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-lg font-bold uppercase tracking-widest">Education</h2>
+      <ul class="mt-6 space-y-6">
         {
-            EDUCATION.map((education) => (
-                <li class="mt-6">
-                    <div class="flex gap-2 flex-col">
-                        <h3 class="text-base font-semibold flex gap-1 items-center">
-                            {education.title}{" "}
-                            {education.place &&
-                                (education.placeUrl ? (
-                                    <a
-                                        href={education.placeUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        class="text-sm font-normal relative"
-                                    >
-                                        @ {education.place}{" "}
-                                        <Icon
-                                            id="material-symbols-open-in-new-rounded"
-                                            className="h-2.5 w-2.5 absolute top-0.5 -right-3"
-                                        />
-                                    </a>
-                                ) : (
-                                    <span class="text-sm font-normal">
-                                        @ {education.place}
-                                    </span>
-                                ))}
-                        </h3>
-                        <p class="text-xs text-gray-500">{education.date}</p>
-                    </div>
-                    {/*
+          EDUCATION.map((education) => (
+            <li>
+              <div class="flex gap-2 flex-col">
+                <h3 class="text-base font-semibold flex gap-1 items-center">
+                  {education.title}{" "}
+                  {education.place &&
+                    (education.placeUrl ? (
+                      <a
+                        href={education.placeUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-sm font-normal relative"
+                      >
+                        @ {education.place}{" "}
+                        <Icon
+                          id="material-symbols-open-in-new-rounded"
+                          className="h-2.5 w-2.5 absolute top-0.5 -right-3"
+                        />
+                      </a>
+                    ) : (
+                      <span class="text-sm font-normal">
+                        @ {education.place}
+                      </span>
+                    ))}
+                </h3>
+                <p class="text-xs text-gray-500">{education.date}</p>
+              </div>
+              {/*
               <article
                 class="my-2 prose dark:prose-invert prose-sm max-w-none"
                 dangerouslySetInnerHTML={{
@@ -83,8 +93,31 @@ import { marked } from "marked";
                   ),
                 }}
               />*/}
-                </li>
-            ))
+            </li>
+          ))
         }
-    </ul>
+      </ul>
+    </div>
+    <div>
+      <h2 class="text-lg font-bold uppercase tracking-widest">Highlights</h2>
+      <ul class="mt-6 grid grid-cols-2 gap-6">
+        {
+          HIGHLIGHTS_HOMEPAGE.map((highlight) => (
+            <div class="_card w-fit flex flex-col gap-2">
+              <p class="font-bold">{highlight.title}</p>
+              <p class="text-sm">{highlight.description}</p>
+              <a
+                class="_link text-sm mt-auto self-end"
+                href={highlight.url}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Read more
+              </a>
+            </div>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
 </Layout>
