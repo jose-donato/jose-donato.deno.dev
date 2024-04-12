@@ -2,8 +2,6 @@
 import DarkMode from "./DarkMode.astro";
 import Icon from "./Icon.astro";
 import { SOCIALS } from "../utils/constants";
-import { Image } from "astro:assets";
-import avatar from "../assets/avatar.webp";
 ---
 
 <div class="absolute top-4 right-4 z-10 hidden gap-2 md:flex">
@@ -56,10 +54,11 @@ import avatar from "../assets/avatar.webp";
     </div>
   </div>
   <div class="flex md:min-w-[20%]">
-    <Image
-      src={avatar}
-      class="rounded-md h-40 w-40 object-cover shadow-lg"
+    <img
+      src="/avatar.webp"
+      class="rounded-md h-40 object-cover shadow-lg"
       alt="me"
+      loading="eager"
     />
   </div>
 </div>
