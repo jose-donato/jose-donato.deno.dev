@@ -37,7 +37,7 @@ export const PAST_EXPERIENCE_HOMEPAGE = [
 		title: "Fullstack Developer",
 		place: "OpenBB",
 		placeUrl: "https://openbb.co",
-		description: `Currently working at OpenBB with the mission of building modern investment research platforms for everyone. In this process, I've been involved in multiple projects. Built [openbb.co](https://openbb.co), the company website, using remix.run, TailwindCSS, TypeScript, mdx-bundler. I'm involved in the development of our financial discord and telegram bot made with Python. To manage this bot, built a web platform - [my.openbb.co](https://my.openbb.co) also using Remix and TailwindCSS. I usually add features (normally crypto related) to our bigger and open source product called [OpenBB Terminal](https://openbb.co/github). We recently launched our enterprise product, [OpenBB Terminal Pro](https://openbb.co/github), that is a web application built with React, TailwindCSS, Zustand, and other amazing technologies. Sign up for the [waitlist](https://my.openbb.co/app/pro/early-access).`,
+		description: `Currently working at OpenBB with the mission of building modern investment research platforms for everyone. In this process, I've been involved in multiple projects. Built [openbb.co](https://openbb.co), the company website, using remix.run, TailwindCSS, TypeScript, mdx-bundler. I'm involved in the development of our financial discord and telegram bot made with Python. To manage all OpenBB Products, we built a web platform - [my.openbb.co](https://my.openbb.co) also using Remix and TailwindCSS. I usually add features (normally crypto related) to our bigger and open source product called [OpenBB Terminal](https://openbb.co/github). We recently launched our enterprise product, [OpenBB Terminal Pro](https://openbb.co/github), that is a web application built with React, TailwindCSS, Zustand, and other amazing technologies. Sign up [today](https://pro.openbb.co).`,
 		date: "2021 - Present",
 	},
 	{
@@ -61,7 +61,7 @@ export const HIGHLIGHTS_HOMEPAGE = [
 		title:
 			"Building the first AI-Powered Financial Terminal: OpenBB Terminal Pro",
 		description:
-			"Leading the development from its inception, we built the first AI-powered financial terminal, OpenBB Terminal Pro, that revolutionizes the way we do investment research. It's a performant web application highly customizable and tailored for professional investors.",
+			"Main developer behind the first AI-powered financial terminal, OpenBB Terminal Pro. It's a performant web application highly customizable and tailored for professional investors. Sign up below.",
 		url: "https://openbb.co/pro",
 	},
 	{
