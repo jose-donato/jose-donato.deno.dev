@@ -12,6 +12,31 @@ import { marked } from "marked";
 <Layout>
   <div class="space-y-20">
     <div>
+      <h2 class="text-lg font-bold uppercase tracking-widest">Highlights</h2>
+      <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+        {
+          HIGHLIGHTS_HOMEPAGE.map((highlight, idx) => (
+            <div
+              class={`_card w-fit flex flex-col gap-2 ${
+                idx === 0 ? "md:col-span-2" : "col-span-1"
+              }`}
+            >
+              <p class="font-bold">{highlight.title}</p>
+              <p class="text-sm">{highlight.description}</p>
+              <a
+                class="_link text-sm mt-auto self-end"
+                href={highlight.url}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Read more
+              </a>
+            </div>
+          ))
+        }
+      </ul>
+    </div>
+    <div>
       <h2 class="text-lg font-bold uppercase tracking-widest">
         Job Experience
       </h2>
@@ -42,10 +67,10 @@ import { marked } from "marked";
                       </span>
                     ))}
                 </h3>
-                <p class="text-xs text-gray-500">{experience.date}</p>
+                <p class="text-xs text-zinc-500">{experience.date}</p>
               </div>
               <article
-                class="my-2 prose dark:prose-invert prose-sm max-w-none"
+                class="my-2 prose dark:prose-invert prose-sm max-w-none prose-a:_link"
                 set:html={marked(experience.description)}
               />
             </li>
@@ -82,7 +107,7 @@ import { marked } from "marked";
                       </span>
                     ))}
                 </h3>
-                <p class="text-xs text-gray-500">{education.date}</p>
+                <p class="text-xs text-zinc-500">{education.date}</p>
               </div>
               {/*
               <article
@@ -94,31 +119,6 @@ import { marked } from "marked";
                 }}
               />*/}
             </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div>
-      <h2 class="text-lg font-bold uppercase tracking-widest">Highlights</h2>
-      <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-        {
-          HIGHLIGHTS_HOMEPAGE.map((highlight, idx) => (
-            <div
-              class={`_card w-fit flex flex-col gap-2 ${
-                idx === 0 ? "md:col-span-2" : "col-span-1"
-              }`}
-            >
-              <p class="font-bold">{highlight.title}</p>
-              <p class="text-sm">{highlight.description}</p>
-              <a
-                class="_link text-sm mt-auto self-end"
-                href={highlight.url}
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                Read more
-              </a>
-            </div>
           ))
         }
       </ul>
