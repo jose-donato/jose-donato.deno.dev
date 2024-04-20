@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { PROJECTS } from "../utils/constants";
+
+const technologies = Array.from(
+  new Set(PROJECTS.flatMap((project) => project.technologies))
+);
+const url = new URL(Astro.request.url);
+const query = url.searchParams.get("q") || "";
+const results = query
+  ? PROJECTS.filter((project) => project.technologies.includes(query))
+  : PROJECTS;
+---
+
+<Layout>
+  <div class="space-y-20">
+    <div>
+      <h2 class="text-lg font-bold uppercase tracking-widest">Projects</h2>
+      <ul class="mt-6">
+        <form class="flex flex-wrap gap-2">
+          {
+            technologies.map((tech) => (
+              <button
+                type="submit"
+                name="q"
+                value={tech}
+                class={query === tech ? "_btn" : "_btn-outline"}
+              >
+                {tech}
+              </button>
+            ))
+          }
+          {
+            query && (
+              <button type="submit" name="q" value="">
+                Reset
+              </button>
+            )
+          }
+        </form>
+        <ul class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
+          {
+            results.map((project) => (
+              <li class="_card flex flex-col gap-2">
+                <h2 class="font-bold">{project.title}</h2>
+                <p class="text-sm">Type: {project.type}</p>
+                <p class="text-sm">
+                  Technologies: {project.technologies.join(", ")}
+                </p>
+                <p class="text-sm">Description: {project.description}</p>
+                <a
+                  href={project.url}
+                  rel="noreferrer noopener"
+                  target="_blank"
+                  class="_link mt-auto self-end text-sm"
+                >
+                  Read more
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </ul>
+    </div>
+  </div>
+</Layout>
