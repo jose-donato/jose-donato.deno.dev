@@ -23,11 +23,14 @@ const ogImageUrl = "/og_image.png";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script is:inline>
-      // The configured mode is stored in local storage
-      const theme = localStorage.getItem("theme");
-
-      // Put dark class on html tag to enable dark mode
-      document.querySelector("html").className = theme;
+      // Immediately set the theme based on local storage or system preference
+      const theme =
+        localStorage.getItem("theme") ||
+        (window.matchMedia("(prefers-color-scheme: dark)").matches
+          ? "dark"
+          : "light");
+      document.documentElement.classList.toggle("dark", theme === "dark");
+      // This ensures the theme is applied as early as possible, reducing flicker
     </script>
 
     <link
