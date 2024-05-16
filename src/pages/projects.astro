@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
 import { PROJECTS } from "../utils/constants";
 
 const technologies = Array.from(
@@ -17,7 +18,8 @@ const results = query
     <div>
       <h2 class="text-lg font-bold uppercase tracking-widest">Projects</h2>
       <ul class="mt-6">
-        <form class="flex flex-wrap gap-2">
+        <form class="space-y-2">
+          <div class="flex flex-wrap gap-2">
           {
             technologies.map((tech) => (
               <button
@@ -30,9 +32,11 @@ const results = query
               </button>
             ))
           }
+          </div>
           {
             query && (
-              <button type="submit" name="q" value="">
+              <button class="_btn gap-2 ml-auto" type="submit" name="q" value="">
+                <Icon id="system-uicons-reset" className="w-4 h-4" />
                 Reset
               </button>
             )

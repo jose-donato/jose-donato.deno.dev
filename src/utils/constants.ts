@@ -51,7 +51,7 @@ export const PAST_EXPERIENCE_HOMEPAGE = [
 	{
 		title: "Freelance Fullstack Developer",
 		place: "",
-		description: `In 2018, I built the credential platform for Queima das Fitas, one of the biggest festivals in Portugal - it enabled the creation of the credentials and included an application (in Flutter) to read the QR codes at the festivals' entrance. I have also built a [native application for a high school in my hometown](https://appadvice.com/app/myesjf/1462460664) and a different [application for Queima das Fitas](https://noticias.uc.pt/multimedia/videos/queimapp-chegou-a-primeira-aplicacao-mobile-dedicada-a-queima-das-fitas/) which later evolved into [EveApp](https://www.facebook.com/EveApp2019/). All these applications were built using React Native. Later, I developed several applications professionally including a website for a nation-wide radio [ruc.pt](https://rux.pt) using Next.js, TailwindCSS for the frontend and Wordpress, Graphql for the backend, as well as other web applications using Next.js and Firebase for clients in Upwork freelancing platform.`,
+		description: `In 2018, I built the credential platform for Queima das Fitas, one of the biggest festivals in Portugal - it enabled the creation of the credentials and included an application (in Flutter) to read the QR codes at the festivals' entrance. I have also built a [native application for a high school in my hometown](https://appadvice.com/app/myesjf/1462460664) and a different [application for Queima das Fitas](https://noticias.uc.pt/multimedia/videos/queimapp-chegou-a-primeira-aplicacao-mobile-dedicada-a-queima-das-fitas/) which later evolved into [EveApp](https://www.facebook.com/EveApp2019/). All these applications were built using React Native. Later, I developed several applications professionally including a website for a nation-wide radio [ruc.pt](https://ruc.pt) using Next.js, TailwindCSS for the frontend and Wordpress, GraphQL for the backend, as well as other web applications using Next.js and Firebase for clients in Upwork freelancing platform.`,
 		date: "2018 - 2020",
 	},
 ];
@@ -95,6 +95,51 @@ export const PROJECTS = [
 		url: "https://openbb.co",
 	},
 	{
+		title: "OpenBB Terminal Pro",
+		type: "web app",
+		technologies: ["React", "TailwindCSS", "Zustand", "Tanstack/React Query"],
+		description: "An enterprise product for investment research.",
+		url: "https://openbb.co/github",
+	},
+	{
+		title: "ollama-reply",
+		type: "browser extension",
+		technologies: [
+			"React",
+			"Vite",
+			"TypeScript",
+			"TailwindCSS",
+			"shadcn-ui",
+			"Ollama",
+		],
+		description:
+			"An open-source browser extension that leverages the power of the Ollama Llama3 model to generate engaging replies for social media growth.",
+		url: "https://github.com/jose-donato/ollama-reply",
+	},
+	{
+		title: "Race Stack",
+		type: "web app",
+		technologies: [
+			"Remix",
+			"TailwindCSS",
+			"TypeScript",
+			"Cloudflare Pages",
+			"Cloudflare D1",
+			"Drizzle ORM",
+		],
+		description:
+			"A Remix run stack built for the edge, utilizing Cloudflare Pages and D1 for optimal performance.",
+		url: "https://github.com/jose-donato/race-stack",
+	},
+	{
+		title: "Sprite Your SVGs",
+		type: "web app",
+		technologies: ["SvelteKit", "TailwindCSS", "TypeScript"],
+		description:
+			"Transform and optimize your SVGs by generating an efficient sprite, reducing HTTP requests and externalizing icon data.",
+		url: "https://github.com/jose-donato/sprite-your-svgs",
+	},
+	{
 		title: "OpenBB Docs",
 		type: "website",
 		technologies: ["docussaurus", "TailwindCSS", "TypeScript", "React"],
@@ -123,13 +168,6 @@ export const PROJECTS = [
 		description: "An open source product for investment research.",
 		url: "https://openbb.co/products/terminal",
 		githubUrl: "",
-	},
-	{
-		title: "OpenBB Terminal Pro",
-		type: "web app",
-		technologies: ["React", "TailwindCSS", "Zustand", "Tanstack/React Query"],
-		description: "An enterprise product for investment research.",
-		url: "https://openbb.co/github",
 	},
 	{
 		title: "Credential Platform for Queima das Fitas",
@@ -163,9 +201,9 @@ export const PROJECTS = [
 	{
 		title: "RUC.pt",
 		type: "website",
-		technologies: ["Next.js", "TailwindCSS", "Wordpress", "Graphql"],
+		technologies: ["Next.js", "TailwindCSS", "Wordpress", "GraphQL"],
 		description: "A website for a nation-wide radio.",
-		url: "https://rux.pt",
+		url: "https://ruc.pt",
 	},
 ];
 
