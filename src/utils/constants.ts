@@ -207,6 +207,45 @@ export const PROJECTS = [
 	},
 ];
 
+export const IMAGES = [
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/bassducqxyux75yqybq7",
+		title: "Rita",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/afk2fbua5sucgupicufv",
+		title: "Ethy",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/vdipoqhmwtcxpxhmfr9x",
+		title: "SF 2023",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/rdreu0qwwqvqfsmkxmfa",
+		title: "Azores 2024",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/wzbtcrczs1gv7fxo5gtz",
+		title: "Ethy",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/x66bsli4ocvcmspgt4nd",
+		title: "Sofia",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/zhjqv8szas0jyvf0xicf",
+		title: "Rita",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/rovcvozxed2kucxhpyik",
+		title: "Ethy",
+	},
+	{
+		url: "https://res.cloudinary.com/dr1p6nhsi/image/upload/f_auto,q_auto/p9hzxm2ezkd3jatmc69v",
+		title: "Combloux 2023",
+	},
+];
+
 export const SOCIALS = [
 	{
 		url: "https://github.com/jose-donato",

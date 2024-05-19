@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Icon from "../components/Icon.astro";
+import { IMAGES } from "../utils/constants";
+---
+
+<Layout>
+  <div class="space-y-20">
+    <div>
+      <h2 class="text-lg font-bold uppercase tracking-widest">Gallery</h2>
+      <div
+        class="mt-6 gap-y-14 gap-x-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4"
+      >
+        {
+          IMAGES.map((image) => (
+            <img
+              src={image.url}
+              alt={image.title}
+              class="_card p-0 transition-all duration-300 md:w-32 md:hover:scale-150 z-10"
+            />
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</Layout>
