@@ -62,7 +62,7 @@ export const HIGHLIGHTS_HOMEPAGE = [
 			"Building the first AI-Powered Financial Terminal: OpenBB Terminal Pro",
 		description:
 			"Main developer behind the first AI-powered financial terminal, OpenBB Terminal Pro. It's a performant web application highly customizable and tailored for professional investors. Sign up below.",
-		url: "https://openbb.co/pro",
+		url: "https://openbb.co/products/terminal",
 	},
 	{
 		title: "Showcased on Cloudflare: Edge-Optimized Remix Run Stack",
