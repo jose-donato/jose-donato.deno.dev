@@ -23,6 +23,15 @@ export const LINKS = [
 	},
 ];
 
+export const TOOLS = [
+	{
+		title: "Sprite your SVGs",
+		slug: "sprite-your-svgs",
+		description:
+			"Transform and optimize your SVGs by generating an efficient sprite. Reduce HTTP requests, style with CSS, and externalize icon data.",
+	},
+];
+
 export const EDUCATION = [
 	{
 		title: "Master in Informatics Security",
