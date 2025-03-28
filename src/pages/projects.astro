@@ -89,10 +89,10 @@ const projectsWithStars = await Promise.all(
                     Read more
                   </a>
                   {project.stars !== undefined && (
-                    <div class="flex items-center gap-1 text-sm">
+                    <a href={project.url} target="_blank" rel="noreferrer noopener" class="flex items-center gap-1 text-sm">
                       <Icon id="material-symbols-light-kid-star-sharp" className="w-4 h-4 text-yellow-400" />
                       <span>{project.stars}</span>
-                    </div>
+                    </a>
                   )}
                 </div>
               </li>
