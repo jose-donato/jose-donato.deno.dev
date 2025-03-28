@@ -1,3 +1,13 @@
+interface Project {
+	title: string;
+	type: string;
+	technologies: string[];
+	description: string;
+	url: string;
+	githubUrl?: string;
+	stars?: number;
+}
+
 export const LINKS = [
 	{
 		url: "/",
@@ -79,7 +89,7 @@ export const HIGHLIGHTS_HOMEPAGE = [
 	},
 ];
 
-export const PROJECTS = [
+export const PROJECTS: Project[] = [
 	{
 		title: "OpenBB Website",
 		type: "website",
